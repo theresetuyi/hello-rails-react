@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  resources :events
+  # get 'root/index'
+  get '/api/greeting', to: 'greetings#index'
+  root 'root#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root 'events#index'
 end
